@@ -50,6 +50,18 @@ Scenario: Each spell casting party member will have spell types that they can ca
   Then I will select the party member "Alice"
   Then I will see that the party member can cast "Dark" spells
 
+Scenario: Each party member that can use a mount will have mounts listed that they can use
+  Given I am on the party menu
+  Then I will select the party member "Derek"
+  Then I will see that the party member can mount "Riding Horse"
+  Then I will see that the party member can mount "War Horse"
+  Then I will see that the party member can mount "Leonin"
+
+Scenario: Each party member will have mounts that they can use
+  Given I am on the party menu
+  Then I will select the party member "William"
+  Then I will see that the party member cannot use any types mount
+
 Scenario: Each non-spell casting party member will not have a list of spell types they can cast
   Given I am on the party menu
   Then I will select the party member "Derek"
